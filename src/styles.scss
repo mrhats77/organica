@@ -1,1 +1,59 @@
-/* You can add global styles to this file, and also import other style files */
+/* Import Bootstrap SCSS file */
+@import 'bootstrap/scss/bootstrap';
+
+
+
+// #2ECC71
+.form-control:focus {
+  border-color: #2ECC71;
+  box-shadow: inset 0 1px 1px rgba(0, 0, 0, 0.075), 0 0 8px #2ECC71;
+}
+
+.btn-primary {
+  background-color: #2ECC71; /* Change to your desired color */
+  border-color: #2ECC71; /* Change to your desired color */
+  color: #ffffff; /* Change to your desired color */
+}
+
+.btn-primary:hover {
+  background-color: #239753; /* Change to your desired color */
+  border-color: #239753; /* Change to your desired color */
+}
+
+.btn-primary:focus,
+.btn-primary:active {
+  background-color: #239753; /* Change to your desired color */
+  border-color: #239753; /* Change to your desired color */
+  box-shadow: 0 0 0 0.2rem #218a4d; /* Change to your desired color */
+}
+
+.btn-outline-custom {
+  color: #2ECC71; /* Text color */
+  border-color: #2ECC71; /* Border color */
+}
+
+.btn-outline-custom:hover {
+  cursor: pointer;
+  color: #fff; /* Text color on hover */
+  background-color: #2ECC71; /* Background color on hover */
+  border-color: #2ECC71; /* Border color on hover */
+}
+.pink-outline-btn {
+  color:#2ECC71; /* Set the outline color to red */
+}
+
+.eyeicon {
+  position: absolute;
+  right: 10px; /* Adjusted right position to align with the input field */
+  top: 50%; /* Centered vertically */
+  transform: translateY(-50%); /* Adjusted translateY value */
+  cursor: pointer;
+  color: #2ECC71;
+}
+
+.error-p {
+  color: red;
+  font-size: 14px;
+}
+
+

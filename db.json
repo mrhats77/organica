@@ -1,0 +1,254 @@
+{
+  "products": [
+    {
+      "category": "bread",
+      "imageUrl": "https://static.pexels.com/photos/2434/bread-food-healthy-breakfast.jpg",
+      "price": 3,
+      "title": "Freshly Baked Bread",
+      "categoryId": 1,
+      "id": 2
+    },
+    {
+      "category": "vegetables",
+      "imageUrl": "https://static.pexels.com/photos/8390/food-wood-tomatoes.jpg",
+      "price": 2.5,
+      "title": "Tomato",
+      "categoryId": 5,
+      "id": 4
+    },
+    {
+      "category": "vegetables",
+      "imageUrl": "https://upload.wikimedia.org/wikipedia/commons/7/7f/Lettuce_Mini_Heads_%287331119710%29.jpg",
+      "price": 1,
+      "title": "Lettuce",
+      "categoryId": 5,
+      "id": 11
+    },
+    {
+      "category": "seasonings",
+      "imageUrl": "https://upload.wikimedia.org/wikipedia/commons/8/8c/Cinnamon-other.jpg",
+      "price": 0.5,
+      "title": "Cinnamon Stick",
+      "categoryId": 4,
+      "id": 18
+    },
+    {
+      "category": "seasonings",
+      "imageUrl": "https://upload.wikimedia.org/wikipedia/commons/4/48/Saffron_Crop.JPG",
+      "price": 3,
+      "title": "Saffron",
+      "categoryId": 4,
+      "id": 19
+    },
+    {
+      "category": "seasonings",
+      "imageUrl": "https://spices.com/cdn/shop/products/0bcf16b3e87f5332ee274004646846c649f576330135344ca49057675bab6f97_00535b20-6590-48fd-886c-71f95f88a871.jpg?v=1654802866",
+      "price": 0.75,
+      "title": "Ground Turmeric",
+      "categoryId": 4,
+      "id": 20
+    },
+    {
+      "category": "seasonings",
+      "imageUrl": "https://encrypted-tbn2.gstatic.com/licensed-image?q=tbn:ANd9GcT-ut3KPtXNmHJrGPxW3CNHW5D-s1NUp4p6JriRhlisFu8ucSKdk9LblBWybUjWAe7sevUyRJ6pyvMP-UI",
+      "price": 0.5,
+      "title": "Coriander Seeds",
+      "categoryId": 4,
+      "id": 21
+    },
+    {
+      "category": "bread",
+      "imageUrl": "https://upload.wikimedia.org/wikipedia/commons/thumb/4/43/Fabrication_du_lavash_%C3%A0_Noravank_%286%29.jpg/1280px-Fabrication_du_lavash_%C3%A0_Noravank_%286%29.jpg",
+      "price": 1.25,
+      "title": "Lavash Bread",
+      "categoryId": 1,
+      "id": 22
+    },
+    {
+      "category": "bread",
+      "imageUrl": "https://upload.wikimedia.org/wikipedia/commons/1/1d/Bagel-Plain-Alt.jpg",
+      "price": 1,
+      "title": "Bagel Bread",
+      "categoryId": 1,
+      "id": 23
+    },
+    {
+      "category": "fruits",
+      "imageUrl": "https://upload.wikimedia.org/wikipedia/commons/e/e1/Strawberries.jpg",
+      "price": 1.95,
+      "title": "Strawberry",
+      "categoryId": 3,
+      "id": 24
+    },
+    {
+      "category": "bread",
+      "imageUrl": "https://static.pexels.com/photos/416607/pexels-photo-416607.jpeg",
+      "price": 1.25,
+      "title": "Baguette Bread",
+      "categoryId": 1,
+      "id": 25
+    },
+    {
+      "id": 26,
+      "title": "Exotic Mango",
+      "price": 200,
+      "categoryId": 3,
+      "imageUrl": "https://static.libertyprim.com/files/familles/mangue-large.jpg?1569271798",
+      "category": "Fruits"
+    },
+    {
+      "id": 30,
+      "title": "Swiss cheese",
+      "price": 20,
+      "imageUrl": "https://img.jakpost.net/c/2020/03/02/2020_03_02_87967_1583122954._large.jpg",
+      "category": "Dairy",
+      "categoryId": 2
+    },
+    {
+      "id": 33,
+      "title": "Sour Cream",
+      "price": 10,
+      "imageUrl": "https://cdn.apartmenttherapy.info/image/upload/f_auto,q_auto:eco,c_fill,g_center,w_730,h_913/k%2FEdit%2F2022-07-How-To-Make-Sour-Cream%2FSour_Cream-3",
+      "category": "Dairy",
+      "categoryId": 2
+    },
+    {
+      "category": "Vegetables",
+      "imageUrl": "http://www.publicdomainpictures.net/pictures/170000/velka/spinach-leaves-1461774375kTU.jpg",
+      "price": 3.75,
+      "title": "Spinac",
+      "categoryId": 5,
+      "id": 34,
+      "searchKey": [
+        null
+      ]
+    },
+    {
+      "category": "Bread",
+      "imageUrl": "https://static.pexels.com/photos/2434/bread-food-healthy-breakfast.jpg",
+      "price": 4.5,
+      "title": "Freshly Baked Bread",
+      "categoryId": 1,
+      "id": 35,
+      "searchKey": [
+        null
+      ]
+    },
+    {
+      "category": "Vegetables",
+      "imageUrl": "https://static.pexels.com/photos/8390/food-wood-tomatoes.jpg",
+      "price": 3.75,
+      "title": "Tomato",
+      "categoryId": 5,
+      "id": 36,
+      "searchKey": [
+        null
+      ]
+    },
+    {
+      "category": "Fruits",
+      "imageUrl": "https://upload.wikimedia.org/wikipedia/commons/thumb/4/4c/Bananas.jpg/1024px-Bananas.jpg",
+      "price": 1.875,
+      "title": "Banana",
+      "categoryId": 3,
+      "id": 37,
+      "searchKey": [
+        null
+      ]
+    },
+    {
+      "category": "Dairy",
+      "imageUrl": "http://www.palacios.us/palacios_usa/usuariosFtp/conexion/imagenes5008a.jpg",
+      "price": 1.875,
+      "title": "Cheesee",
+      "categoryId": 2,
+      "id": 38,
+      "searchKey": [
+        null
+      ]
+    },
+    {
+      "category": "Vegetables",
+      "imageUrl": "https://upload.wikimedia.org/wikipedia/commons/thumb/1/11/Cauliflowers_-_20051021.jpg/1280px-Cauliflowers_-_20051021.jpg",
+      "price": 2.625,
+      "title": "Cauliflower",
+      "categoryId": 5,
+      "id": 41,
+      "searchKey": [
+        null
+      ]
+    },
+    {
+      "category": "Fruits",
+      "imageUrl": "https://upload.wikimedia.org/wikipedia/commons/1/15/Red_Apple.jpg",
+      "price": 3,
+      "title": "Apple",
+      "categoryId": 3,
+      "id": 43,
+      "searchKey": [
+        null
+      ]
+    },
+    {
+      "category": "Fruits",
+      "imageUrl": "https://upload.wikimedia.org/wikipedia/commons/c/c4/Orange-Fruit-Pieces.jpg",
+      "price": 2.55,
+      "title": "Orange",
+      "categoryId": 3,
+      "id": 44,
+      "searchKey": [
+        null
+      ]
+    },
+    {
+      "category": "Fruits",
+      "imageUrl": "https://upload.wikimedia.org/wikipedia/commons/3/36/Kyoho-grape.jpg",
+      "price": 3,
+      "title": "Grape",
+      "categoryId": 3,
+      "id": 45,
+      "searchKey": [
+        null
+      ]
+    },
+    {
+      "id": 47,
+      "title": "Quesillo",
+      "price": 2,
+      "imageUrl": "https://www.elfinanciero.com.mx/resizer/q0SVcYBban9FETMZOCXRp7nrEB0=/800x0/filters:format(jpg):quality(70)/cloudfront-us-east-1.images.arcpublishing.com/elfinanciero/6DIQFTSALNEGDIDCIA3PCK4TPY.jpeg",
+      "category": "Dairy",
+      "categoryId": 2
+    },
+    {
+      "id": 48,
+      "title": "Peach",
+      "price": 3,
+      "imageUrl": "https://sakura.co/wp-content/uploads/2022/03/shutterstock_675217411-1.png",
+      "category": "Fruits",
+      "categoryId": 3
+    }
+  ],
+  "categories": [
+    {
+      "id": 1,
+      "name": "Bread"
+    },
+    {
+      "id": 2,
+      "name": "Dairy"
+    },
+    {
+      "id": 3,
+      "name": "Fruits"
+    },
+    {
+      "id": 4,
+      "name": "Seasoning and spices"
+    },
+    {
+      "id": 5,
+      "name": "Vegetables"
+    }
+  ]
+ 
+}

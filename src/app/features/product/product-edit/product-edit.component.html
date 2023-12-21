@@ -1,0 +1,98 @@
+<!-- <div class="row">
+  <div class="col-md-6"></div>
+  <div class="col-md-6"></div>
+</div> -->
+<div class="row mt-5">
+  <div class="col-12 col-sm-6 col-md-6 col-lg-6">
+    <form (ngSubmit)="saveProduct()" [formGroup]="productForm">
+        <div class="mb-3">
+            <label for="title" class="form-label">Title</label>
+            <input
+            class="form-control"
+            id="title" 
+            type="text"
+            placeholder="Title"
+            formControlName="title"
+            [ngClass]="{'is-invalid': (productForm.get('title')!.touched ||
+            productForm.get('title')!.dirty) &&
+            !productForm.get('title')!.valid }" 
+            />      
+        
+        <span class="invalid-feedback">
+            <span *ngIf="productForm.get('title')!.errors?.required">
+              Please enter a title.
+            </span>
+          </span>
+        </div>
+    
+        <div class="mb-3">
+            <label for="price" class="form-label">Price</label>
+            <div class="input-group mb-3">
+                <span class="input-group-text">$</span>
+                <input 
+                class="form-control"
+                type="number"
+                formControlName="price"
+                [ngClass]="{'is-invalid':getFormControlErrors('price')  }" 
+                />      
+            
+            <span class="invalid-feedback">
+                <span *ngIf="productForm.get('price')!.errors?.required">
+                  Please enter a price.
+                </span>
+              </span>
+            </div>
+        </div>
+        <div class="mb-3">
+          <label for="category" class="form-label">Category</label>
+          <select
+            id="category"
+            class="form-select"
+            formControlName="category"
+            [ngClass]="{'is-invalid':getFormControlErrors('category')
+            }"
+          >
+            <option value="">--Select Category--</option>
+            <option *ngFor="let c of categories$ | async" [value]="c.name">{{ c.name }}</option>
+          </select>
+          <span class="invalid-feedback">
+            <span *ngIf="productForm.get('category')!.errors?.required">
+              Please choose a category.
+            </span>
+          </span>
+        </div>
+        
+        <div class="mb-3">
+            <label for="imageUrl" class="form-label">Image URL</label>
+            <input
+            class="form-control"
+            id="imageUrl"
+            type="text" 
+                formControlName="imageUrl"
+                [ngClass]="{'is-invalid':getFormControlErrors('imageUrl') }" 
+                />      
+            
+            <span class="invalid-feedback">
+                <span *ngIf="productForm.get('imageUrl')!.errors?.required">
+                  Please enter an imageUrl.
+                </span>
+              </span>
+        </div>
+        <div class="btn-group" role="group" aria-label="Basic example">
+          <button type="submit" class="btn btn-outline-custom " [disabled]="productForm.invalid">Save</button>
+          <button type="button" class="btn btn-outline-danger" (click)="deleteProduct()">Delete</button>
+          <button type="button" class="btn btn-outline-secondary" routerLink="/admin/products">Cancel</button>
+        </div>
+    </form>
+
+  </div>
+  <div class="col-12 col-sm-6 col-md-6 col-lg-6" *ngIf="productForm.get('title')?.value">
+    <div class="card" style="width: 18rem;">
+  <img class="card-img-top" [src]="productForm.get('imageUrl')?.value" >
+  <div class="card-body">
+    <h5 class="card-title">{{productForm.get('title')?.value}}</h5>
+    <p class="card-text">{{productForm.get('price')?.value | currency}}</p>
+  </div>
+</div>
+  </div>
+</div>

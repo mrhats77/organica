@@ -1,10 +1,18 @@
 import { Component } from '@angular/core';
+import { RouterOutlet } from '@angular/router';
+import { HeaderComponent } from './core/components/header/header.component';
+import { CheckOutComponent } from './features/check-out/check-out.component';
 
 @Component({
   selector: 'app-root',
-  templateUrl: './app.component.html',
-  styleUrls: ['./app.component.scss']
+  standalone: true,
+  imports: [RouterOutlet, HeaderComponent, CheckOutComponent],
+  template:
+    `<app-header />
+  <div class="container">
+    <router-outlet />
+  </div>`
 })
 export class AppComponent {
-  title = 'organic';
+  title = 'organica';
 }

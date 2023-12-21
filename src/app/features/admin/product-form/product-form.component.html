@@ -1,0 +1,79 @@
+<!-- <form (ngSubmit)="onsave()" [formGroup]="productForm">
+    <div class="mb-3">
+        <label for="title" class="form-label">Title</label>
+        <input
+        class="form-control"
+        id="title" 
+        type="text"
+        placeholder="Title"
+        formControlName="title"
+        [ngClass]="{'is-invalid':
+        (productForm.get('title')!.touched
+        || productForm.get('title')!.dirty) 
+        && !productForm.get('title')!.valid }" 
+        />      
+    
+    <span class="invalid-feedback">
+        <span *ngIf="productForm.get('title')!.errors?.required">
+          Please enter a title.
+        </span>
+      </span>
+    </div>
+
+    <div class="mb-3">
+        <label for="price" class="form-label">Price</label>
+        <div class="input-group mb-3">
+            <span class="input-group-text">$</span>
+            <input 
+            class="form-control"
+            id="price" 
+            type="number"
+            formControlName="price"
+            [ngClass]="{'is-invalid':
+            (productForm.get('price')!.touched
+            || productForm.get('price')!.dirty) 
+            && !productForm.get('price')!.valid }" 
+            />      
+        
+        <span class="invalid-feedback">
+            <span *ngIf="productForm.get('price')!.errors?.required">
+              Please enter a price.
+            </span>
+          </span>
+        </div>
+    </div>
+    <div class="mb-3">
+        <label for="category" class="form-label">Category</label>
+        <select id="category" class="form-select" formControlName="category"
+        [ngClass]="{'is-invalid':
+        (productForm.get('category')!.touched
+        || productForm.get('category')!.dirty) 
+        && !productForm.get('category')!.valid }" 
+        >
+            <option value="">--Select Category--</option>
+            <option *ngFor="let c of categories$ | async" [value]="c.category.name">{{c.category.name}}</option>
+        </select>
+        
+    </div>
+    
+    <div class="mb-3">
+        <label for="imageUrl" class="form-label">Image URL</label>
+        <input
+        class="form-control"
+        id="imageUrl"
+        type="text" 
+            formControlName="imageUrl"
+            [ngClass]="{'is-invalid':
+            (productForm.get('imageUrl')!.touched
+            || productForm.get('imageUrl')!.dirty) 
+            && !productForm.get('imageUrl')!.valid }" 
+            />      
+        
+        <span class="invalid-feedback">
+            <span *ngIf="productForm.get('imageUrl')!.errors?.required">
+              Please enter an imageUrl.
+            </span>
+          </span>
+    </div>
+    <button type="submit" class="btn btn-primary mt-3" [disabled]="productForm.invalid">Save</button>
+</form> -->

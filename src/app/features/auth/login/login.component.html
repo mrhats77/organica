@@ -1,0 +1,73 @@
+<div class="row justify-content-center align-items-center min-vh-100">
+    <div class="col-md-5">
+        <div class="card">
+            <div class="card-body d-flex flex-column align-items-center">
+                <h1 class="card-title">User Login</h1>
+                <form [formGroup]="loginForm" (ngSubmit)="Login()">
+                    <!-- Email input -->
+                    <div class="mb-3">
+                        <input
+                        class="form-control form-outline"
+                        id="email" 
+                        type="email"
+                        placeholder="Email (required)"
+                        formControlName="email"
+                        [ngClass]="{'is-invalid':
+                         getFormControlErrors('email')}" 
+                        />      
+                    
+                    <span class="invalid-feedback">
+                        <span *ngIf="loginForm.get('email')!.errors?.required">
+                          Please enter your email address.
+                        </span>
+                        <span *ngIf="loginForm.get('email')!.errors?.email">
+                          Please enter a valid email address.
+                        </span>
+                      </span>
+                    </div>
+                
+
+                    <!-- Password input -->
+                    <div class="mb-3 form-group">
+                        <input 
+                        class="form-control"
+                        [type]="changetype ? 'password' : 'text'" 
+                        placeholder="Enter password"
+                        formControlName="password"  
+                        [ngClass]="{'is-invalid':
+                        getFormControlErrors('password') }"
+                        >
+                        <span class="eyeicon" (click)="viewpass()">
+                            <i [ngClass]="visible ? 'fa fa-eye' : 'fa fa-eye-slash'"></i>
+                        </span>
+
+                        <span class="invalid-feedback">
+                            <span *ngIf="loginForm.get('password')!.errors?.required">
+                                Password is required.
+                            </span>
+                            <span *ngIf="loginForm.get('password')!.errors?.pattern">
+                                <ul>
+                                    <li>At least one uppercase letter</li>
+                                    <li>At least one lowercase letter</li>
+                                    <li>At least one number</li>
+                                    <li>At least one special character</li>
+                                    <li>At least 8 characters long</li>
+                                </ul>
+                            </span>
+                        </span>
+                        </div>
+
+                    <!-- Submit button and password validation message -->
+                    <div class="d-grid gap-2 mb-3">
+                        <button type="submit" class="btn btn-outline-custom" [disabled]="loginForm.invalid">Login</button>
+                    </div>
+
+                    <!-- Signup link -->
+                    <a (click)="openSignup()">Want to create an account? Click here!</a>
+                </form>
+            </div>
+        </div>
+    </div>
+</div>
+
+

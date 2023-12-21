@@ -1,0 +1,54 @@
+
+<div class="row">
+  <div class="col-lg-10 col-md-9 col-sm-6">
+    <input [(ngModel)]="listFilter" class="form-control" type="text" placeholder="Search">
+  </div>
+  <div class="col-lg-2  col-md-3 col-sm-6 d-grid ">
+    <a routerLink="/products/0/edit" class="btn btn-primary">New product</a>
+  </div>
+</div>
+<div class="table-responsive">
+  <table class="table table-hover">
+      <thead>
+        <tr>
+        <tr>
+            <th>#</th>
+            <th (click)="sort('title')">Title 
+                <i class="fa-solid fa-arrow-down"></i>
+              </th>
+              <th (click)="sort('price')">Price 
+                <i class="fa-solid fa-arrow-down"></i>
+              </th>
+            <th></th>
+        </tr>
+      </thead>
+      <tbody>
+        <tr *ngFor="let product of filteredProducts; let i = index" >
+        <td>{{ (page - 1) * pageSize + i + 1 }}</td>
+          <td>{{ product.title | titlecase }}</td>
+          <td>{{ product.price | currency }}</td>
+          <td>
+              <div class="btn-group" role="group" aria-label="Product actions">
+                  <a class="btn btn-secondary"
+                  style="width:80px"
+                  [routerLink]="['/products', product.id, 'edit']">
+            Edit
+          </a>
+                  <!-- <button type="button" class="btn btn-danger" >Delete</button> -->
+                </div>
+        </tr>
+      </tbody>
+    </table>
+</div>
+
+
+<div class="d-sm-flex flex-column flex-sm-row justify-content-between p-2">
+    <p>Total products: {{ totalProducts }}</p>
+    <!-- add custum pagination later on -->
+    <ngb-pagination  [collectionSize]="products.length" [(page)]="page" [pageSize]="pageSize" ></ngb-pagination>
+    <select class="form-select" style="width: auto" [(ngModel)]="pageSize">
+        <option [ngValue]="5">5 items per page</option>
+        <option [ngValue]="10">10 items per page</option>
+        <option [ngValue]="15">15 items per page</option>
+    </select>
+</div>

@@ -1,0 +1,87 @@
+<div class="row justify-content-center align-items-center min-vh-100">
+    <div class="col-md-5">
+        <div class="card">
+            <div *ngIf="showLogin" class="card-body d-flex flex-column align-items-center">
+                <h1 class="card-title">User Signup</h1>
+                <form (ngSubmit)="signUp()" [formGroup]="signUpForm">
+
+                    <!-- Username input -->
+                    <div class="mb-3">
+                        <input class="form-control form-outline" type="text" placeholder="Enter you name"
+                            formControlName="name" [ngClass]="{'is-invalid':getFormControlErrors('name') }">
+                        <span class="invalid-feedback">
+                            <span *ngIf="signUpForm.get('name')!.errors?.required">
+                                Enter your name.
+                            </span>
+                        </span>
+                    </div>
+
+                    <!-- Email input -->
+                    <div class="mb-3">
+                        <input class="form-control form-outline" type="email" placeholder="Enter email"
+                            formControlName="email" [ngClass]="{'is-invalid':getFormControlErrors('email') }">
+                        <span class="invalid-feedback">
+                            <span *ngIf="signUpForm.get('email')!.errors?.required">
+                                Input email.
+                            </span>
+                            <span *ngIf="signUpForm.get('email')!.errors?.email">
+                                Please enter a valid email.
+                            </span>
+                        </span>
+                    </div>
+
+                    <div formGroupName="passwordGroup">
+                        <!-- Password input -->
+                        <div class="mb-3 form-group">
+                            <input class="form-control"
+                                   [type]="changetype ? 'password' : 'text'"
+                                   placeholder="Enter password" 
+                                   formControlName="password"
+                                   [ngClass]="{'is-invalid':
+                                    signUpForm.get('passwordGroup')!.errors ||
+                                    getFormControlErrors('passwordGroup.password') }">
+                            <span class="eyeicon" (click)="viewpass()">
+                                <i [ngClass]="visible ? 'fa fa-eye' : 'fa fa-eye-slash'"></i>
+                            </span>
+    
+                            <span class="invalid-feedback">
+                                <span *ngIf="signUpForm.get('passwordGroup.password')!.errors?.required">
+                                    Enter your password.
+                                </span>
+                                <span *ngIf="signUpForm.get('passwordGroup.password')!.errors?.pattern">
+                                    password does not meet requirements.
+                                </span>
+                            </span>
+                        </div>
+    
+                        <!-- Confirm password input -->
+                        <div class="mb-3 form-group">
+                            <input class="form-control"
+                                   id="confirmPassword"
+                                   [type]="changetype ? 'password' : 'text'"
+                                   placeholder="Confirm password"
+                                   formControlName="confirmPassword"
+                                   [ngClass]="{'is-invalid':
+                                    signUpForm.get('passwordGroup')!.errors ||
+                                    getFormControlErrors('passwordGroup.confirmPassword') }">   
+                            <span class="invalid-feedback">
+                                <span *ngIf="signUpForm.get('passwordGroup')!.errors?.match">
+                                   Password don't match.
+                                </span>
+                            </span>
+                        </div>
+                    </div>
+
+                    <!-- Submit button and password validation message -->
+                    <div class="d-grid gap-2 mb-3">
+                        <button type="submit" class="btn btn-outline-custom"
+                            [disabled]="signUpForm.invalid">Signup</button>
+                    </div>
+
+                    <!-- Signup link -->
+                    <a (click)="openLogin()">Already have an account? Login here!</a>
+                </form>
+            </div>
+        </div>
+    </div>
+</div>

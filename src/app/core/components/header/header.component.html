@@ -1,0 +1,80 @@
+<!-- Navigation Bar -->
+<nav class="navbar navbar-expand-lg navbar-light bg-light" >
+
+    <!-- Container for the Navbar Content -->
+    <div class="container-fluid">
+
+        <!-- Brand Logo -->
+        <a class="navbar-brand" routerLink="/">
+            <!-- Your Logo -->
+            <img src="path/to/your/logo.png" alt="" height="30">O
+        </a>
+
+        <!-- Navbar Toggler Button for Small Screens -->
+        <button class="navbar-toggler pink-outline-btn" type="button" aria-controls="navbarNav" aria-expanded="false"
+            aria-label="Toggle navigation" (click)="isMenuCollapsed = !isMenuCollapsed">
+            <span class="navbar-toggler-icon"></span>
+        </button>
+
+        <!-- Navbar Content Collapsible on Small Screens -->
+        <div class="collapse navbar-collapse" [ngbCollapse]="isMenuCollapsed" id="navbarNav">
+
+            <!-- Navbar Links -->
+            <ul class="navbar-nav mr-auto">
+                <!-- Shopping Cart Link -->
+                <li class="nav-item">
+                    <a class="nav-link" routerLink="/shopping-cart" routerLinkActive="active" >
+                        Shopping Cart
+                    </a>
+                </li>
+
+                <li class="nav-item">
+                    <a class="nav-link" routerLink="/login" routerLinkActive="active">
+                        Login
+                    </a>
+                </li>
+                
+                <!-- Anonymous User Link (ng-template for structural directive) -->
+                <!-- <ng-template #anonymousUser>
+                    <li class="nav-item">
+                        <a class="nav-link" routerLink="/login" routerLinkActive="active">
+                            Login
+                        </a>
+                    </li>
+                </ng-template> -->
+
+                <!-- User Dropdown with Additional Options -->
+                <li class="nav-item dropdown" ngbDropdown>
+                    <!-- Dropdown Toggle Button -->
+                    <a  class="nav-link dropdown-toggle primary" routerLinkActive="active" ngbDropdownToggle
+                        role="button" data-bs-toggle="dropdown"
+                        aria-expanded="false">
+                        <i class="fa-solid fa-user" routerLinkActive="active"></i> username
+                    </a>
+
+                    <!-- Dropdown Menu -->
+                    <ul class="dropdown-menu" ngbDropdownMenu routerLinkActive="active">
+                        <!-- User Orders Link -->
+                        <li><a class="dropdown-item" ngbDropdownItem routerLink="/my/orders" routerLinkActive="active"><i class="fa-solid fa-cart-shopping"></i> My orders</a></li>
+                        
+                        <!-- Admin Orders Link -->
+                        <li><a class="dropdown-item" ngbDropdownItem routerLink="/admin/orders" routerLinkActive="active"><i class="fa-solid fa-list-check"></i> Manage Orders</a></li>
+                        
+                        <!-- Admin Products Link -->
+                        <li><a  class="dropdown-item" ngbDropdownItem routerLink="/admin/products" routerLinkActive="active"><i class="fa-solid fa-box"></i> Manage Products</a></li>
+                        
+                        <!-- Admin Users link-->
+                        <li><a class="dropdown-item" ngbDropdownItem routerLink="/admin/users" routerLinkActive="active"><i class="fa-solid fa-users"></i> Manage Users</a></li>
+                        
+                        <!-- Divider (if needed) -->
+                        <!-- <li><hr class="dropdown-divider" ngbDropdownItem></li> -->
+                        <hr>
+                        
+                        <!-- Logout Link -->
+                        <li><a class="dropdown-item" ngbDropdownItem  (click)="onLogout()"><i class="fa-solid fa-power-off"></i> Logout</a></li>
+                    </ul>
+                </li>
+            </ul>
+        </div>
+    </div>
+</nav>

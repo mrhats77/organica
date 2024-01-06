@@ -1,29 +1,27 @@
-<!-- <div class="row">
-  <div class="col-md-6"></div>
-  <div class="col-md-6"></div>
-</div> -->
+
 <div class="row mt-5">
   <div class="col-12 col-sm-6 col-md-6 col-lg-6">
     <form (ngSubmit)="saveProduct()" [formGroup]="productForm">
-        <div class="mb-3">
-            <label for="title" class="form-label">Title</label>
-            <input
-            class="form-control"
-            id="title" 
-            type="text"
-            placeholder="Title"
-            formControlName="title"
-            [ngClass]="{'is-invalid': (productForm.get('title')!.touched ||
-            productForm.get('title')!.dirty) &&
-            !productForm.get('title')!.valid }" 
-            />      
+      <div class="mb-3">
+        <label for="title" class="form-label">Title</label>
+        <input
+          class="form-control"
+          id="title" 
+          type="text"
+          placeholder="Title"
+          formControlName="title"
+          [ngClass]="{'is-invalid': (productForm.get('title')!.touched ||
+          productForm.get('title')!.dirty) &&
+          !productForm.get('title')!.valid }"
         
+        />      
+      
         <span class="invalid-feedback">
-            <span *ngIf="productForm.get('title')!.errors?.required">
-              Please enter a title.
-            </span>
+          <span *ngIf="productForm.get('title')!.errors?.required">
+            Please enter a title.
           </span>
-        </div>
+        </span>
+      </div>
     
         <div class="mb-3">
             <label for="price" class="form-label">Price</label>
@@ -43,6 +41,25 @@
               </span>
             </div>
         </div>
+
+        <div class="mb-3">
+            <label for="price" class="form-label">Quantity in stock</label>
+            <div class="input-group mb-3">
+                <input 
+                class="form-control"
+                type="number"
+                formControlName="quantityInStock"
+                [ngClass]="{'is-invalid':getFormControlErrors('quantityInStock')  }" 
+                />      
+            
+            <span class="invalid-feedback">
+                <span *ngIf="productForm.get('quantityInStock')!.errors?.required">
+                  Please enter a quantity.
+                </span>
+              </span>
+            </div>
+        </div>
+
         <div class="mb-3">
           <label for="category" class="form-label">Category</label>
           <select

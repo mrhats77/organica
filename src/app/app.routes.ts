@@ -5,7 +5,7 @@ import { OrderSuccessComponent } from "./features/order-success/order-success.co
 import { LoginComponent } from "./features/auth/login/login.component";
 import { AdminProductsComponent } from "./features/admin/admin-products/admin-products.component";
 import { AdminOrdersComponent } from "./features/admin/admin-orders/admin-orders.component";
-import { ShoppingCartComponent } from "./features/shopping-cart/shopping-cart.component";
+import { ShoppingCartComponent } from "./features/shopping-cart/cart/shopping-cart.component";
 import { MyOrdersComponent } from "./features/my-orders/my-orders.component";
 import { AdminUsersComponent } from "./features/admin/admin-users/admin-users.component";
 import { ProductFormComponent } from "./features/admin/product-form/product-form.component";

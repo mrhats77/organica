@@ -1,5 +1,5 @@
 import { Component, OnInit, inject } from '@angular/core';
-import { AsyncPipe, CommonModule, NgFor, NgIf } from '@angular/common';
+import { AsyncPipe, CommonModule, NgFor, NgIf, TitleCasePipe } from '@angular/common';
 import { FormGroup, FormBuilder, Validators, ReactiveFormsModule } from '@angular/forms';
 import { CategoryService } from 'src/app/core/services/category.service';
 import { getFormControlErrors } from 'src/app/shared/utilityFunctions';
@@ -11,11 +11,12 @@ import { Subscription, take } from 'rxjs';
 @Component({
   selector: 'app-product-edit',
   standalone: true,
-  imports: [CommonModule, ReactiveFormsModule, AsyncPipe, NgFor, RouterLink, NgIf],
+  imports: [CommonModule, ReactiveFormsModule, AsyncPipe, NgFor, RouterLink, NgIf, TitleCasePipe],
   templateUrl: './product-edit.component.html',
   styleUrls: ['./product-edit.component.scss']
 })
 export class ProductEditComponent implements OnInit {
+ 
   productForm!: FormGroup;
   product!: IProduct;
   errorMessage = '';
@@ -37,7 +38,8 @@ export class ProductEditComponent implements OnInit {
       title: ['',[Validators.required]],
       price: [,[Validators.required]],
       category: ['',[Validators.required]],
-      imageUrl: ['',Validators.required]
+      imageUrl: ['',Validators.required],
+      quantityInStock: [,[Validators.required]],
     })
 
     this.sub = this.route.paramMap.pipe(take(1)).subscribe(

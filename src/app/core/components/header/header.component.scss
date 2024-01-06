@@ -13,7 +13,7 @@ a {
       height: 3px;
       bottom: 0;
       left: 0;
-      background-color: #2ECC71;
+      background-color: #399D04;
       transform: scaleX(0);
       transition: transform 0.3s ease;
     }
@@ -25,14 +25,14 @@ a {
 
   /* Active styles for regular links */
 .navbar-nav .nav-item .nav-link.active {
-  color: #2ECC71 !important;
+  color: #399D04 !important;
   width: auto;
 }
 
 /* Active styles for dropdown items */
 .navbar-nav .nav-item .dropdown-menu .dropdown-item.active {
   background-color: transparent !important;
-  color: #2ECC71;
+  color: #399D04;
 }
 
 .navbar-nav .nav-item .dropdown-menu .dropdown-item:visited {

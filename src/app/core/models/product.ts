@@ -6,6 +6,8 @@ export interface IProduct{
     categoryId?: number;
     category?: string;
     searchKey?: string[];
+    quantityInStock?: number;
+    description?: string;
     imageUrl: string;
     [key: string]: any;
 }

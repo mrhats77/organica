@@ -3,10 +3,13 @@
     <div class="card-body">
         <h5 class="card-title">{{product.title}}</h5>
         <p class="card-text">{{product.price | currency}}</p>
+        <span *ngIf="product.id === addedProductId" class="text-warning">
+            <strong>Product added to cart!</strong>
+        </span>
     </div>
     <div class="card-footer">
-        <button class="btn btn-primary
-            
-        w-100">Add to Cart</button>
+        <button class="btn btn-primary w-100"
+        (click)="addToCart()">Add to Cart</button>
+       
     </div>
 </div>

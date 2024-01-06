@@ -15,7 +15,8 @@ import { ProductsCatalogComponent } from 'src/app/core/components/products-catal
   templateUrl: './products.component.html',
   styleUrls: ['./products.component.scss']
 })
-export class ProductsComponent {
+export class ProductsComponent implements OnInit {
+  
   selectedCategory: string = '';
   
   private productService = inject(ProductService);
@@ -35,6 +36,14 @@ export class ProductsComponent {
   private categorySelectedSubject = new BehaviorSubject<string>('');
   categorySelectedAction$ = this.categorySelectedSubject.asObservable();
   
+  ngOnInit(): void {
+    const storedCategory = localStorage.getItem('selectedCategory');
+    if (storedCategory) {
+      this.selectedCategory = storedCategory;
+      this.categorySelectedSubject.next(storedCategory);
+    }
+  }
+
   products$ = combineLatest([
     this.productService.productsWithAdd$,
     this.categorySelectedAction$
@@ -70,10 +79,7 @@ export class ProductsComponent {
     onSelected(categoryName: string): void {
       this.selectedCategory = categoryName;
       this.categorySelectedSubject.next(categoryName);
+      localStorage.setItem('selectedCategory', categoryName);
     }
 
   }
-
-
-
-

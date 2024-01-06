@@ -19,7 +19,7 @@ import { NgbPaginationModule, } from '@ng-bootstrap/ng-bootstrap';
 })
 export class AdminProductsComponent implements OnInit {
   originalProducts!: IProduct[] ;
-  products!: IProduct[];
+  products: IProduct[] = [];
   errorMessage!: '';
   totalProducts!: number;
   _listFilter = '';
@@ -27,10 +27,12 @@ export class AdminProductsComponent implements OnInit {
   sortKey: string = '';
   pageSize = 5;
   reverse: boolean = false;
+  
 
   private productService = inject(ProductService);
 
   products$ = this.productService.products$
+  productsWithCategory$ = this.productService.productsWithCategory$
 
   get listFilter(): string {
     return this._listFilter;
@@ -43,16 +45,20 @@ export class AdminProductsComponent implements OnInit {
   }
 
   getPaginatedProducts(page: number, pageSize: number): IProduct[] {
+    if (!this.products) {
+      return [];
+    }
     return this.products
       .slice((page - 1) * pageSize, (page - 1) * pageSize + pageSize);
   }
+  
   
   get filteredProducts(): IProduct[] {
     return this.getPaginatedProducts(this.page, this.pageSize);
   }
 
  ngOnInit(): void {
-  this.productService.products$.subscribe({
+  this.productService.productsWithCategory$.subscribe({
     next: products => {
       this.originalProducts = products;
       this.products = [...this.originalProducts];
@@ -82,4 +88,6 @@ export class AdminProductsComponent implements OnInit {
         (a[key] < b[key] ? 1 : -1) : (a[key] < b[key] ? -1 : 1)
     );
   }
+
+ 
 }

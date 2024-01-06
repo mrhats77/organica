@@ -7,7 +7,7 @@
         <!-- Brand Logo -->
         <a class="navbar-brand" routerLink="/">
             <!-- Your Logo -->
-            <img src="path/to/your/logo.png" alt="" height="30">O
+            <img src="../../../../assets/logo.png" alt="" height="70">
         </a>
 
         <!-- Navbar Toggler Button for Small Screens -->
@@ -23,8 +23,11 @@
             <ul class="navbar-nav mr-auto">
                 <!-- Shopping Cart Link -->
                 <li class="nav-item">
-                    <a class="nav-link" routerLink="/shopping-cart" routerLinkActive="active" >
-                        Shopping Cart
+                    <a class="nav-link" routerLink="/shopping-cart" routerLinkActive="active">
+                        <i class="fa-solid fa-cart-shopping fa-lg"></i>
+                        <span *ngIf="cartCount()" class="position-absolute  start-100 translate-middle badge rounded-pill" style="background-color: #399D04;">
+                            {{cartCount() > 0 ? cartCount() : ''}}
+                        </span>
                     </a>
                 </li>
 

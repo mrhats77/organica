@@ -1,0 +1,20 @@
+<h1> {{ pageTitle }}</h1>
+
+<div *ngIf="cartItems().length; else noItems">
+  <div class="row">
+    <div class="col-12 col-md-4 fw-bold ">Product</div>
+    <div class="col-4 col-md-2 fw-bold text-center">Price</div>
+    <div class="col-4 col-md-2 fw-bold text-center">Quantity</div>
+    <div class="col-4 col-md-2 fw-bold text-center">Extended Price</div>
+  </div>
+
+  <!-- Display the cart items -->
+  <div *ngFor="let item of cartItems()">
+    <sw-cart-item [cartItem]='item' />
+  </div>
+
+  <button routerLink="/check-out" class="btn btn-secondary">Check out</button>
+</div>
+
+
+<ng-template #noItems> No items in cart </ng-template>

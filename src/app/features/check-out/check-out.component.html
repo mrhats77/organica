@@ -1,1 +1,47 @@
-<h1>Checkout works!</h1>
+<div class="row">
+    <div class="col-6">
+        <h2>Shipping</h2>
+<form [formGroup]="orderForm" (ngSubmit)="placeOrder()">
+    <div class="mb-3 mt-3">
+        <label for="name" class="form-label">Name</label>
+        <input class="form-control form-outline" id="name" type="text" placeholder="name" formControlName="name" [ngClass]="{'is-invalid':
+                         getFormControlErrors('name')}" />
+        <span class="invalid-feedback">
+            <span *ngIf="orderForm.get('name')!.errors?.required">
+                Name is required
+            </span>
+        </span>
+    </div>
+
+    <div class="mb-3 mt-3">
+        <label for="address" class="form-label">Address</label>
+        <input class="form-control form-outline" id="address" type="text"  placeholder="line1" formControlName="address" [ngClass]="{'is-invalid':
+                         getFormControlErrors('address')}" />
+
+        <span class="invalid-feedback">
+            <span *ngIf="orderForm.get('address')!.errors?.required">
+                Address is required
+            </span>
+        </span>
+    </div>
+
+    <div class="mb-3 mt-3">
+        <label for="city" class="form-label">City</label>
+        <input class="form-control form-outline" id="city" type="text"  placeholder="city" formControlName="city" [ngClass]="{'is-invalid':
+                         getFormControlErrors('city')}" />
+
+        <span class="invalid-feedback">
+            <span *ngIf="orderForm.get('city')!.errors?.required">
+                City is required
+            </span>
+        </span>
+    </div>
+
+    <!-- Submit order button -->
+    <div class="d-grid gap-2 mb-3">
+        <button type="submit" class="btn btn-outline-custom" [disabled]="orderForm.invalid">Place order</button>
+    </div>
+
+</form>
+    </div>
+</div>

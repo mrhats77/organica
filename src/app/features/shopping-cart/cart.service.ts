@@ -1,6 +1,5 @@
 import { HttpClient } from '@angular/common/http';
 import { Injectable, computed, inject, signal } from '@angular/core';
-import { Observable } from 'rxjs';
 import { ICartItem } from 'src/app/core/models/cart.model';
 import { IProduct } from 'src/app/core/models/product';
 

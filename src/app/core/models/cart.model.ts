@@ -5,7 +5,6 @@ export interface ICart {
 }
 
 export interface ICartItem {
-
     product: IProduct;
     quantity: number;
     dateCreated?: string | undefined; // Add this line

@@ -8,7 +8,7 @@ import { CategoryService } from 'src/app/core/services/category.service';
   providedIn: 'root'
 })
 export class ProductService {
-  private productsUrl = 'http://localhost:3000/products';
+  private productsUrl = 'api/products';
 
   products!: IProduct[];
   private http = inject(HttpClient)

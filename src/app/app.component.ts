@@ -1,4 +1,4 @@
-import { Component } from '@angular/core';
+import { Component, inject } from '@angular/core';
 import { RouterOutlet } from '@angular/router';
 import { HeaderComponent } from './core/components/header/header.component';
 
@@ -14,4 +14,5 @@ import { HeaderComponent } from './core/components/header/header.component';
 })
 export class AppComponent {
   title = 'organica';
+  
 }

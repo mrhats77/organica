@@ -1,5 +1,4 @@
 import { Routes } from "@angular/router";
-import { HomeComponent } from "./features/home/home.component";
 import { CheckOutComponent } from "./features/check-out/check-out.component";
 import { OrderSuccessComponent } from "./features/order-success/order-success.component";
 import { LoginComponent } from "./features/auth/login/login.component";

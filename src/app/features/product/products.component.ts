@@ -47,18 +47,18 @@ export class ProductsComponent implements OnInit {
   products$ = combineLatest([
     this.productService.productsWithAdd$,
     this.categorySelectedAction$
-  ])
-    .pipe(
-      map(([products, selectedCategoryName]) =>
-        products.filter(product =>
-          selectedCategoryName ? product.category === selectedCategoryName : true
-        )),
-      catchError(err => {
-        this.errorMessageSubject.next(err);
-        return EMPTY;
-      })
-    );
-
+  ]).pipe(
+    map(([products, selectedCategoryName]) =>
+      products.filter(product =>
+        selectedCategoryName ? product.category === selectedCategoryName : true
+      )
+    ),
+    catchError(err => {
+      this.errorMessageSubject.next(err);
+      return EMPTY;
+    })
+  );
+  
   categories$ = this.categoryService.categories$
     .pipe(
       catchError(err => {

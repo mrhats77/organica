@@ -6,7 +6,8 @@ import { provideRouter } from "@angular/router";
 import { routes } from "./app.routes";
 import { BrowserModule } from "@angular/platform-browser";
 import { AddHeadersInterceptor } from "./core/interceptors/add-headers.interceptor";
-
+import { AppData } from "./app-data";
+import { InMemoryWebApiModule } from 'angular-in-memory-web-api';
 
 
 
@@ -18,7 +19,8 @@ export const appConfig:ApplicationConfig = {
         importProvidersFrom(
             FormsModule,
             NgbModule,
-            BrowserModule
+            BrowserModule,
+            InMemoryWebApiModule.forRoot(AppData, { delay: 1000 })
         ),
         
         provideRouter(routes)

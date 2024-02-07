@@ -33,7 +33,7 @@ export class ProductService {
         searchKey: [product.productName]
       } as IProduct))
     ),
-    // shareReplay(1),
+    shareReplay(1),
   );
 
   private productSelectedSubject = new BehaviorSubject<number>(0);
@@ -71,7 +71,7 @@ export class ProductService {
       return this.http.get<IProduct>(url)
       .pipe(
         tap(data => console.log('getProduct: ' + JSON.stringify(data))),
-        // catchError(this.handleError)
+        catchError(this.handleError)
         );
       }
       

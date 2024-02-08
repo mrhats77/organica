@@ -100,8 +100,8 @@ export class ProductData {
       price: 20,
       imageUrl: "https://img.jakpost.net/c/2020/03/02/2020_03_02_87967_1583122954._large.jpg",
       category: "Dairy",
-      quantitynStock: 7,
-      categryId: 2
+      categoryId: 2,
+      quantitynStock: 7
     },
     {
       id: 33,
@@ -110,7 +110,7 @@ export class ProductData {
       imageUrl: "https://cdn.apartmenttherapy.info/image/upload/f_auto,q_auto:eco,c_fill,g_center,w_730,h_913/k%2FEdit%2F2022-07-How-To-Make-Sour-Cream%2FSour_Cream-3",
       category: "Dairy",
       quantitynStock: 6,
-      categryId: 2
+      categoryId: 2
     },
      {
       id: 34,
@@ -186,7 +186,7 @@ export class ProductData {
       price: 2,
       imageUrl: "https://www.elfinanciero.com.mx/resizer/q0SVcYBban9FETMZOCXRp7nrEB0=/800x0/filters:format(jpg):quality(70)/cloudfront-us-east-1.images.arcpublishing.com/elfinanciero/6DIQFTSALNEGDIDCIA3PCK4TPY.jpeg",
       category: "Dairy",
-      categoryd: 2
+      categoryId: 2
     },
     {
       id: 48,
@@ -202,14 +202,14 @@ export class ProductData {
       imageUrl: "https://www.herbazest.com/imgs/a/b/7/451975/cardamomo.jpg",
       price: 2,
       category: "Seasoning and spices",
-      categoryd: 4
+      categoryId: 4
     }, {
       id: 50,
       title: "Miyazaki Mangoes",
       imageUrl: "https://japantoday-asset.scdn3.secure.raxcdn.com/img/store/e9/72/aed4a1b468a4cea7c3133cadcd22d20e5cce/mangoice_1/_w850.jpg",
       price: 200,
       category: "Fruits",
-      categoryd: 3,
+      categoryId: 3,
       quanttyInStock: 20
     },
     {
@@ -227,7 +227,7 @@ export class ProductData {
       price: 3,
       category: "Fruits",
       quantitynStock: 5,
-      categryId: 3
+      categoryId: 3
     }
   ];
 }

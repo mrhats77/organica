@@ -102,15 +102,17 @@ export class ProductData {
       category: "Dairy",
       quantitynStock: 7,
       categryId: 2
-    }, {
+    },
+    {
       id: 33,
-      "title": "Sour Cream",
-      "price": 10,
-      "imageUrl": "https://cdn.apartmenttherapy.info/image/upload/f_auto,q_auto:eco,c_fill,g_center,w_730,h_913/k%2FEdit%2F2022-07-How-To-Make-Sour-Cream%2FSour_Cream-3",
+      title: "Sour Cream",
+      price: 10,
+      imageUrl: "https://cdn.apartmenttherapy.info/image/upload/f_auto,q_auto:eco,c_fill,g_center,w_730,h_913/k%2FEdit%2F2022-07-How-To-Make-Sour-Cream%2FSour_Cream-3",
       category: "Dairy",
       quantitynStock: 6,
       categryId: 2
-    }, {
+    },
+     {
       id: 34,
       category: "Vegetables",
       imageUrl: "http://www.publicdomainpictures.net/pictures/170000/velka/spinach-leaves-1461774375kTU.jpg",
@@ -180,9 +182,9 @@ export class ProductData {
     },
     {
       id: 47,
-      "title": "Quesillo",
-      "price": 2,
-      "imageUrl": "https://www.elfinanciero.com.mx/resizer/q0SVcYBban9FETMZOCXRp7nrEB0=/800x0/filters:format(jpg):quality(70)/cloudfront-us-east-1.images.arcpublishing.com/elfinanciero/6DIQFTSALNEGDIDCIA3PCK4TPY.jpeg",
+      title: "Quesillo",
+      price: 2,
+      imageUrl: "https://www.elfinanciero.com.mx/resizer/q0SVcYBban9FETMZOCXRp7nrEB0=/800x0/filters:format(jpg):quality(70)/cloudfront-us-east-1.images.arcpublishing.com/elfinanciero/6DIQFTSALNEGDIDCIA3PCK4TPY.jpeg",
       category: "Dairy",
       categoryd: 2
     },
@@ -212,9 +214,9 @@ export class ProductData {
     },
     {
       id: 51,
-      "title": "Paprika",
-      "imageUrl": "https://diethood.com/wp-content/uploads/2023/06/paprika-5.jpg",
-      "price": 10,
+      title: "Paprika",
+      imageUrl: "https://diethood.com/wp-content/uploads/2023/06/paprika-5.jpg",
+      price: 10,
       category: "Seasoning and spices",
       categoryId: 4
     },
